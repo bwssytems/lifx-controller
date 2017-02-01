@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.bwssystems.HABridge</groupId>
-	<artifactId>ha-bridge</artifactId>
-	<version>4.1.2a</version>
+	<groupId>com.bwssystems.lifx</groupId>
+	<artifactId>lifx-controller</artifactId>
+	<version>.0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>HA Bridge</name>
-	<description>Emulates a Philips Hue bridge to allow the Amazon Echo to hook up to other HA systems, i.e. Vera or Harmony Hub or Nest, using lightweight frameworks</description>
+	<name>Lifx Controller</name>
+	<description>Java library to handle Lifx discovery and control</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -18,59 +18,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
-	<repositories>
-		<repository>
-	    	<id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	    <repository>
-	        <id>Eclipse Paho Repo</id>
-	        <url>https://repo.eclipse.org/content/repositories/paho-releases/</url>
-	    </repository>
-	</repositories>
-
 	<dependencies>
-		<dependency>
-		    <groupId>com.github.bwssytems</groupId>
-		    <artifactId>harmony-java-client</artifactId>
-		    <version>1.1.1</version>
-		    <exclusions>
-		       <exclusion> 
-		          <groupId>org.slf4j</groupId>
-		          <artifactId>slf4j-simple</artifactId>
-		       </exclusion>
-		       <exclusion> 
-		            <groupId>org.slf4j</groupId>
-		            <artifactId>log4j-over-slf4j</artifactId>
-		       </exclusion>
-		    </exclusions> 
-		</dependency>
-        <dependency>
-            <groupId>com.github.bwssytems</groupId>
-            <artifactId>nest-controller</artifactId>
-            <version>1.0.13</version>
-		    <exclusions>
-		       <exclusion> 
-		          <groupId>org.slf4j</groupId>
-		          <artifactId>slf4j-simple</artifactId>
-		       </exclusion>
-		       <exclusion> 
-		            <groupId>org.slf4j</groupId>
-		            <artifactId>log4j-over-slf4j</artifactId>
-		       </exclusion>
-		    </exclusions> 
-        </dependency>
-		<dependency>
-		    <groupId>com.sparkjava</groupId>
-		    <artifactId>spark-core</artifactId>
-		    <version>2.3</version>
-		    <exclusions>
-		    	<exclusion>
-		    		<artifactId>slf4j-simple</artifactId>
-		    		<groupId>org.slf4j</groupId>
-		    	</exclusion>
-		    </exclusions>
-		</dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
@@ -96,26 +44,6 @@
             <artifactId>gson</artifactId>
             <version>2.6.2</version>
         </dependency>
-		<dependency>
-		  <groupId>net.java.dev.eval</groupId>
-		  <artifactId>eval</artifactId>
-		  <version>0.5</version>
-		</dependency>
-		<dependency>
-			<groupId>com.google.inject</groupId>
-			<artifactId>guice</artifactId>
-			<version>4.0-beta4</version>
-		</dependency>
-		<dependency>
-		  <groupId>org.igniterealtime.smack</groupId>
-		  <artifactId>smack-core</artifactId>
-		  <version>4.0.7</version>
-		</dependency>
-	    <dependency>
-	        <groupId>org.eclipse.paho</groupId>
-	        <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
-	        <version>1.1.0</version>
-	    </dependency>
 		<dependency>
 		    <groupId>junit</groupId>
 		    <artifactId>junit</artifactId>
@@ -208,7 +136,7 @@
 							<transformers>
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>com.bwssystems.HABridge.HABridge</mainClass>
+									<mainClass>com.bwssystems.lifx.LifxController</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>
