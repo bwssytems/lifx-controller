@@ -5,7 +5,7 @@
 
 	<groupId>com.bwssystems.lifx</groupId>
 	<artifactId>lifx-controller</artifactId>
-	<version>.0.0.1-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>Lifx Controller</name>
@@ -19,6 +19,11 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+		  <groupId>com.github.besherman</groupId>
+		  <artifactId>lifx-sdk-java</artifactId>
+		  <version>2.0</version>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
