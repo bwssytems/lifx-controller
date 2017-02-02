@@ -1,6 +1,8 @@
 package com.bwssystems.lifx;
 
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +14,8 @@ public class LifxController {
     private static final Logger log = LoggerFactory.getLogger(LifxController.class);
 
     public static void main(String[] args) {
-    	LFXClient client = new LFXClient();        
+    	LFXClient client = new LFXClient();
+    	LogManager.getLogManager().getLogger(java.util.logging.Logger.GLOBAL_LOGGER_NAME).setLevel(Level.FINE);
     	try {
     		log.info("Open Lifx client....");
 			client.open(true);
