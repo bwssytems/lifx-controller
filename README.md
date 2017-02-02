@@ -1,2 +1,2 @@
 # lifx-controller
-Java library to handle Lifx discovery and control
+Java application to test lifx-sdk-java
